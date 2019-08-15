@@ -84,6 +84,9 @@ final class Utilities
         $maxDepth = -1,
         $depth = 0
     ) {
+        if ($obj instanceof \GraphQL\Language\AST\Node) {
+            return null;
+        }
         
         $returnVal = array();
         
